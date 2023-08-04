@@ -1,7 +1,4 @@
-import alignment as alignment
-from PyQt5.Qt import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
-from random import randint
+from
 
 app = QApplication([])
 main_window = QWidget()

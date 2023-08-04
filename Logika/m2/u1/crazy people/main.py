@@ -1,4 +1,4 @@
-import alignment as alignment
+
 from PyQt5.Qt import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
 from random import randint
@@ -17,7 +17,7 @@ line.addWidget(button, alignment=Qt.AlignCenter)
 
 def win():
     ran = randint(1, 100)
-    winner.set.Text(str(ran))
+    winner.setText(str(ran))
 
 
 button.clicked.connect(win)
