@@ -26,5 +26,3 @@ main_window.setLayout(line)
 main_window.show()
 app.exec_()
 
-main_window.show()
-app.exec_()
