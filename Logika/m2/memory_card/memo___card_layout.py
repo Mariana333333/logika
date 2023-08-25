@@ -6,6 +6,25 @@ from PyQt5.QtWidgets import (
         QHBoxLayout, QVBoxLayout,
         QGroupBox, QButtonGroup, QRadioButton,
         QPushButton, QLabel, QSpinBox)
+from memo___data import*
+
+radio_list = [r_btn1, r_btn2, r_btn3, r_btn4]
+
+
+frm = Question('Яблуко', 'Apple', 'orange', 'Berry', 'Tomato')
+frm_card = QuestionView(frm, lb_question, radio_list[0], radio_list[1], radio_list[2],radio_list[3])
+
+def show_data():
+    ''' показує на екрані аотрібну інформацію '''
+    pass
+
+def check_results():
+    pass
+
+
+
+
+
 app = QApplication([])
 btn_menu = QPushButton('Меню')
 btn_sleep = QPushButton('Відпочивати')
@@ -14,6 +33,8 @@ lb_Question = QLabel('')
 
 box_minutes = QSpinBox()
 box_minutes.setValue(5)
+frm_card.show()
+
 
 RadioGroupBox = QGroupBox('Варіанти відповідей')
 RadioGroup = QButtonGroup()

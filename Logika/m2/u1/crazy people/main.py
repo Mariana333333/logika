@@ -22,7 +22,7 @@ def win():
 
 button.clicked.connect(win)
 
-main_window.setLayout(line)
+
 main_window.show()
 app.exec_()
 
