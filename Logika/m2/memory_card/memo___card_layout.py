@@ -22,8 +22,7 @@ btn_OK = QPushButton('Відповісти')  # кнопка відповіді
 lb_Question = QLabel('')  # текст питання
 
 
-# Панель з варіантами:
-# група на екрані для перемикачів із відповідями
+
 RadioGroupBox = QGroupBox("Варіанти відповіді")
 # а це для угруповання перемикачів, щоб керувати їхньою поведінкою
 RadioGroup = QButtonGroup()
@@ -41,16 +40,15 @@ RadioGroup.addButton(rbtn_3)
 RadioGroup.addButton(rbtn_4)
 
 
-# Панель із результатом:
 AnsGroupBox = QGroupBox("Результат тесту")
 lb_Result = QLabel('')  # тут розміщується напис "правильно" або "неправильно"
 lb_Correct = QLabel('')  # тут буде написано текст правильної відповіді
 
 
-# Тепер займаємося розміщенням:
 
 
-# Розміщуємо варіанти відповідей у два стовпці всередині групи:
+
+
 layout_ans1 = QHBoxLayout()
 layout_ans2 = QVBoxLayout()  # вертикальні будуть усередині горизонтального
 layout_ans3 = QVBoxLayout()

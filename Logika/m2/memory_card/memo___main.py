@@ -1,6 +1,4 @@
 from PyQt5.QtCore import QTimer
-from PyQt5.QtWidgets import QWidget, QApplication
-from random import shuffle  # перемішуватимемо відповіді у картці питання
 
 from memo___card_layout import *
 from memo___main_layout import *
@@ -116,18 +114,16 @@ def add_form():
 
 
 def del_form():
-    ''' видаляє питання і перемикає фокус '''
     questions_listmodel.removeRows(list_questions.currentIndex().row())
     edit_question(list_questions.currentIndex())
 
 
 def start_test():
-    ''' на початку тесту форма зв'язується з випадковим питанням і показується '''
     show_random()
     win_card.show()
     win_main.showMinimized()
 
-# Встановлення потрібних з`єднань
+
 
 
 def connects():
