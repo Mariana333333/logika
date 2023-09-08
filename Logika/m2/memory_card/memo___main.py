@@ -25,13 +25,13 @@ win_card = QWidget()
 # Тестові данні
 def testlist():
 
-    frm = Question('Яблуко', 'apple', 'application', 'pinapple', 'apply')
+    frm = Question('Скільки країн в світі?', '195', '184', '110', '200')
     questions_listmodel.form_list.append(frm)
-    frm = Question('Дім', 'house', 'horse', 'hurry', 'hour')
+    frm = Question('Скільки океанів в світі?', '5', '3', '4', '10')
     questions_listmodel.form_list.append(frm)
-    frm = Question('Мишка', 'mouse', 'mouth', 'muse', 'museum')
+    frm = Question('Скільки всього материків?', '6', '5', '3', '12')
     questions_listmodel.form_list.append(frm)
-    frm = Question('Число', 'number', 'digit', 'amount', 'summary')
+    frm = Question('Скільки крахн в Африці?', '54', '52', '60', '70')
     questions_listmodel.form_list.append(frm)
 
 # Функції для проведення тесту
