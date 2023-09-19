@@ -6,7 +6,7 @@ class Students():
 
 
 students = []
-
+suma = 0
 with open('students1.txt', 'r', encoding='utf-8') as file:
     for line in file:
         data = line.split(' ')
@@ -16,3 +16,7 @@ with open('students1.txt', 'r', encoding='utf-8') as file:
     for i in students:
         if i.grade == 5:
             print(i.surname)
+    for i in students:
+        suma += i.grade
+    median = suma/len(students)
+    print(f"Середнє арифметичне оцінок = {median}")
