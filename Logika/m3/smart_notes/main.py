@@ -64,7 +64,7 @@ def show_notes():
     key = lst_notes.currentItem().text()
     field_text.setText(notes[key]['текст'])
 
-    lst_tag.addItems(notes[key]['тег'])
+    lst_tag.addItems(notes[key]['теги'])
     lst_tag.clear()
 
 
@@ -98,7 +98,7 @@ def save_note():
 btn_note_save.clicked.connect(save_note)
 btn_note_del.clicked.connect(del_note)
 
-btn_note_create.clicked.connect(add_note())
+btn_note_create.clicked.connect(add_note)
 
 lst_notes.itemClicked.connect(show_notes)
 
