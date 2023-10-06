@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (
 
 
 def WriteToFile():
-    with open('notes.json', 'w', 'encoding=utf8') as file:
+    with open('notes.json', 'w', encoding='utf8') as file:
         json.dump(notes, file, ensure_ascii=False, sort_keys=True, indent=4)
 
 
