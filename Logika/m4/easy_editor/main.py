@@ -100,6 +100,41 @@ class ImageProcessor():
         lb_pic.setPixmap(pixmapimage)
         lb_pic.show()
 
+
+    def saveAndShowImage(self):
+        path = os.path.join(workdir, self.save_dir)
+
+        if not (os.path.exists(path) or os.path.isdir(path)):
+            os.mkdir(path)
+
+
+        image_path = os.path.join(path, self.filename)
+
+        self.original.save(image_path)
+        self.show_image(image_path)
+
+    def do_bw(self):
+        self.original = self.original.convert("L")
+        self.saveAndShowImage()
+
+    def do_left(self):
+        self.original = self.original.transpose(Image.ROTATE_90)
+        self.saveAndShowImage()
+
+    def do_right(self):
+        self.original = self.original.transpose(Image.ROTATE_270)
+        self.saveAndShowImage()
+    def do_flip(self):
+        self.original = self.original.transpose(Image.FLIP_LEFT_RIGHT)
+        self.saveAndShowImage()
+    def do_sharp(self):
+        self.original = self.original.filter(ImageFilter.SHARPEN)
+        self.saveAndShowImage()
+
+
+
+
+
 def showChosenImage():
     filename = lst_files.currentItem().text()
     workimage.loadImage(filename)
@@ -112,6 +147,16 @@ workimage = ImageProcessor()
 
 
 lst_files.itemClicked.connect(showChosenImage)
+
+btn_bw.clicked.connect(workimage.do_bw)
+btn_flip.clicked.connect(workimage.do_flip)
+btn_left.clicked.connect(workimage.do_left)
+btn_right.clicked.connect(workimage.do_right)
+btn_sharp.clicked.connect(workimage.do_sharp)
+
+
+
+
 
 btn_folder.clicked.connect(showFiles)
 main_win.setLayout(Layout_editor)

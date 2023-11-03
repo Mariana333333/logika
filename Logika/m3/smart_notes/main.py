@@ -6,7 +6,6 @@ from PyQt5.QtWidgets import (
     QTableWidget, QListWidgetItem, QFormLayout,
     QGroupBox, QButtonGroup, QRadioButton, QSpinBox)
 
-
 def WriteToFile():
     with open('notes.json', 'w', encoding='utf8') as file:
         json.dump(notes, file, ensure_ascii=False, sort_keys=True, indent=4)
@@ -18,17 +17,18 @@ window = QWidget()
 field_text = QTextEdit()
 
 lb_notes = QLabel('Список заміток')
-
+lb_notes.setStyleSheet('background-color: white')
 
 lst_notes = QListWidget()
 btn_note_create = QPushButton('Створити замітку')
 btn_note_del = QPushButton('Видалити замітку')
 btn_note_save = QPushButton('Зберегти замітку')
+lst_notes.setStyleSheet('background-color:white')
 
 lb_tags = QLabel('Список тегів')
-
+lb_tags.setStyleSheet('background-color: white')
 lst_tag = QListWidget()
-
+lst_tag.setStyleSheet('background-color: white')
 field_tag = QLineEdit()
 btn_tag_add = QPushButton('Додати тег')
 btn_tag_unpin = QPushButton('Відкріпити тег')
@@ -66,7 +66,6 @@ col2.addWidget(field_tag)
 row2 = QHBoxLayout()
 row2.addWidget(btn_tag_add)
 row2.addWidget(btn_tag_unpin)
-
 col2.addLayout(row2)
 col2.addWidget(btn_tag_search)
 
@@ -176,5 +175,6 @@ btn_note_create.clicked.connect(add_note)
 lst_notes.itemClicked.connect(show_notes)
 
 window.setLayout((layout_notes))
+window.setStyleSheet('background-color: pink')
 window.show()
 app.exec_()

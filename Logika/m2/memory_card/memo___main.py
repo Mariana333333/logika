@@ -1,4 +1,4 @@
-from memo___card_layout import *
+from memo___card_layout import
 from PyQt5.QtWidgets import QWidget
 from random import shuffle # будемо змішувати відповіді в картці питання
 
