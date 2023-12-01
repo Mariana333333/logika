@@ -81,7 +81,7 @@ font.init()
 
 font = font.Font(None, 70)
 
-win = font.render('VITCTORY!!!', True, (60, 67, 200))
+win = font.render('VICTORY!!!', True, (60, 67, 200))
 lose = font.render('GAME OVER!!!', True, (250, 0, 10))
 
 
